@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+<servlet>
+<servlet-name>UnitConverter</servlet-name>
+<servlet-class>com.st.servlet.UnitMeasurServlet</servlet-class>
+</servlet>
+<sevlet-mapping>
+<servlet-name>UnitConverter</servlet-name>
+<url-pattren>/wep2Surl</url-pattren>
+</sevlet-mapping>
+<welcome-file-list>
+<welcome-file>input.html</welcome-file>
+</welcome-file-list>
+</web-app>

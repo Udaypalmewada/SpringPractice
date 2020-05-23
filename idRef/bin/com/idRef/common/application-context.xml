@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="car" class="com.idRef.beans.Car">
+		        <!-- 
+		         //we can user this property allso but there are problem
+		         1.incositancy in understandin bean defination
+		         2.program will terminate abnormaly or in iconsistance state 	
+		         <property name="manfacturar" value="yamahaEngin"></property> -->
+	
+		<property name="manfacturar">
+			<idref bean="yamahaEngin" />
+		</property>
+	</bean>
+	<bean id="yamahaEngin" class="com.idRef.beans.yamnhEnginImpl"></bean>
+	<bean id="suzukiEngin" class="com.idRef.beans.suzukiEnginImpl"></bean>
+</beans>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+
+<servlet>
+<servlet-name>loanservlet</servlet-name>
+<servlet-class>com.lc.servlet.LoanCalculatServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>loanservlet</servlet-name>
+<url-pattern>/loanurl</url-pattern>
+</servlet-mapping>
+</web-app>

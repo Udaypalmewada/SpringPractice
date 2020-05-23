@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="motor" class="com.ib.beas.Motor">
+<property name="fuleTank">
+<ref bean="fuleTank"/>
+</property>
+   </bean>
+   <!-- <bean id="fuleTank" class="com.ib.beas.FuleTank">
+<property name="fuleTankType" value="plastic"></property>
+<property name="capacity" value="5"></property>
+</bean> -->
+   
+
+</beans>

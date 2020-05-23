@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="robot" class="com.autowirig.beans.Robot" autowire="byName"></bean>
+<bean id="microProcessor" class="com.autowirig.beans.MicroProcessor">
+<property name="id" value="011"></property>
+<property name="type" value="32-bit"></property>
+</bean>
+<bean id="microProcessor1" class="com.autowirig.beans.MicroProcessor">
+<property name="id" value="011"></property>
+<property name="type" value="32-bit"></property>
+</bean>
+
+<bean id="sensor" class="com.autowirig.beans.Sensor" >
+<property name="id" value="123"></property>
+<property name="name" value="whether"></property>
+
+</bean>
+</beans>

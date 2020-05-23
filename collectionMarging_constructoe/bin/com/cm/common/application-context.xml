@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="course" class="com.cm.beans.course"> <property name="courseName" 
+		value="1stYeayCse"></property> <property name="subject"> <list value-type="java.lang.String"> 
+		<value>bcp</value> <value>ED</value> <value>m1</value> <value>ce</value> 
+		</list> </property> </bean> <bean id="course1" parent="course"> <property 
+		name="courseName" value="1stYearECE"></property> <property name="subject" 
+		> <list value-type="java.lang.String" merge="true"> <value>ee</value> </list> 
+		</property> </bean> -->
+
+
+	<bean id="course" class="com.cm.beans.course">
+		<constructor-arg name="courseName" value="1stYeayCse" />
+		<constructor-arg name="subject">
+			<list>
+				<value>Bcp</value>
+				<value>BPh</value>
+				<value>Cemistry</value>
+				<value>CE</value>
+			</list>
+		</constructor-arg>
+		</bean>
+		<bean id="course1" parent="course">
+			<constructor-arg name="courseName" value="1stYearECE" />
+			<constructor-arg name="subject">
+				<list value-type="java.lang.String" merge="true"> 
+				<value>Prectical</value> 
+				</list></constructor-arg>
+		
+	</bean>
+
+
+
+
+</beans>

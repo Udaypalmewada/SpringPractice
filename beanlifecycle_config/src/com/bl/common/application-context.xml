@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--configurable apprach for bean lif cycle
+1.in this approach their is problem if we manage the 
+2. we have multiple bean than we  have to do configurations manually (init-method="startup" destroy-method="cleanup")
+3.it may chance to inproper confiure
+4.if we change im main class than we have to change all the place in xml bean 
+-->
+<!--Second problem
+	 * in configuarable approache our destoy methos will never call 
+	 * beacause out container is workong on top of  jvm and singletone obj is inside jvm memory (heap)
+	 * thats way our container dont know when object will destroy 
+	  */
+-->
+<bean id="calculator" class="com.bl.beans.Calculator" init-method="startup" destroy-method="cleanup">
+<constructor-arg value="30"/>
+<property name="j" value="10"/>
+</bean>
+</beans>

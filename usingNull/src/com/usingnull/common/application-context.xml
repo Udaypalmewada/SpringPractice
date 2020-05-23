@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="person" class="com.usingnull.beans.person">
+		<constructor-arg value="123" />
+		<constructor-arg name="address" ref="address">
+			<!--in contr. argumen value must be there if not there it will not allow 
+				to create the object of class thas wat we have to use null tag <constructor-arg> 
+				<null/> -->
+		</constructor-arg>
+
+
+		<property name="fullName" value="abc"></property>
+	</bean>
+	<bean id="address" class="com.usingnull.beans.Address">
+		<property name="hno" value="01"></property>
+		<property name="streatname" value="loacl"></property>
+		<property name="city" value="bhopal"></property>
+		<property name="state" value="mp"></property>
+		<property name="zip" value="462030"></property>
+		<property name="country" value="India"></property>
+
+
+
+
+
+
+	</bean>
+</beans>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="cycle" class="com.inerbean.beans.cycle">
+		<property name="id" value="12">
+		</property>
+		<property name="manufacturer" value="atlos"></property>
+		<property name="chain">
+			<bean id="chain" class="com.inerbean.beans.Chain">
+				<property name="id" value="786"></property>
+				<property name="chainType" value="stailess Steel"></property>
+			</bean>
+
+		</property>
+
+	</bean>
+
+
+	<!-- Traditionly way if defining bean
+	<bean id="chain" class="com.inerbean.beans.Chain" > <property name="id" 
+		value="987"></property> <property name="chainType" value="metal"></property> 
+		</bean> -->
+</beans>

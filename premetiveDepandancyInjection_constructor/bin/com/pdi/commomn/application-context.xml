@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+
+	<bean id="officeAddress" class="com.pdi.beans.Address">
+		<constructor-arg name="addressLine1" value="01" />
+		<constructor-arg name="addressLine2" value="151" />
+		<constructor-arg name="streat" value="Kajlash" />
+		<constructor-arg name="city" value="M.p" />
+		<constructor-arg name="zip" value="462030" />
+		<constructor-arg name="country" value="India" />
+
+	</bean>
+
+</beans>

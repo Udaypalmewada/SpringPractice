@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean name="address" class="com.om.beans.Address">
+<property name="city" value="hyd"></property>
+</bean>
+<!-- <bean id="bluedarTrancsportmanager" class="com.om.beans.BludartOrderManager">
+</bean> -->
+<bean id="dtdcTranceportManager" class="com.om.beans.DtdcOrderManager">
+</bean>
+<bean id="amewzonOrderManagementService" class="com.om.beans.AmewzonOrderManagementService">
+<property name="bluedaart" ref="bluedarTrancsportmanager"></property>
+<property name="dtdc" ref="dtdcTranceportManager"></property>
+</bean>
+<alias name="dtdcTranceportManager" alias="bluedarTrancsportmanager"/>
+</beans>

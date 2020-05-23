@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="car" class="com.bi.beans.Car">
+		<property name="id" value="01" />
+		<property name="model" value="Suzulki Desire" />
+		<property name="manufacturer" value="Maruti Suzuki" />
+		<property name="color" value="red" />
+		<property name="fuletype" value="Diesle"></property>
+		<property name="milage" value="14" />
+		<property name="price" value="567000" />
+   </bean>
+   <bean name="car1" parent="car">
+		<property name="id" value="02" />
+		
+   </bean>
+</beans>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="manufaturer" class="com.PancC.beans.Manufacture"
+		c:mid="1234" c:mname="fishToy" c:maddress="hyd" />
+	<bean id="toy" class="com.PancC.beans.Toy">
+	<!-- c:no="123" c:name="robo" 
+			c:type="remort type" -->
+		<constructor-arg value="123" />
+		<constructor-arg value="robot" />
+		<constructor-arg value="remort type" />
+		<constructor-arg ref="manufaturer" />
+	</bean>
+</beans>
